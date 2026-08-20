@@ -1,0 +1,178 @@
+/* Core Styling & Color Scheme */
+:root {
+  --bg-color: #0d0d0d; /* Almost black */
+  --card-bg: #1a1a1a; /* Dark gray */
+  --text-main: #ffffff;
+  --accent: #2ecc71; /* Strong accent green */
+  --text-dim: #999999;
+  --border: #333333;
+}
+
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace; /* Unique font style */
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+/* App Container */
+.app {
+  width: 90%;
+  max-width: 500px;
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 2px solid var(--accent); /* Original bold border */
+  box-shadow: 0 10px 0 #000000;
+}
+
+/* Typography */
+h1 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+/* Navigation Links */
+nav {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: bold;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+nav a:hover {
+  color: var(--accent);
+  background-color: #000;
+  border: 1px solid var(--border);
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  background-color: #000;
+  color: var(--text-main);
+  border: 1px solid var(--border);
+  padding: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+button[type="submit"] {
+  background-color: var(--accent);
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+/* Filter Controls */
+.filters {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 0;
+}
+
+.filters button {
+  background: transparent;
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+  padding: 5px 12px;
+  cursor: pointer;
+  font-family: inherit;
+  text-transform: lowercase;
+}
+
+.filters button:hover {
+  color: var(--text-main);
+  border-color: var(--text-main);
+}
+
+/* Conditional Rendering Empty State Message[cite: 1] */
+.app p {
+  color: var(--text-dim);
+  text-align: center;
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+/* List Styles[cite: 1] */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  gap: 10px;
+}
+
+/* Standard guide styling remains[cite: 1]: Strikethrough still applied via JS */
+li span {
+  font-size: 1rem;
+}
+
+li button {
+  background: transparent;
+  color: #e74c3c; /* Red delete button */
+  border: 1px solid transparent;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+li button:hover {
+  border-color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.1);
+}
