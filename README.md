@@ -1,1 +1,1 @@
-A responsive React Todo application built with Vite, React Router, and LocalStorage persistence, featuring task filtering and multi-page routing.
+A Todo list web app made with React and Vite. Features multi-page navigation using React Router, task filtering (All, Active, Completed), and local storage saving so your tasks stay saved after a page refresh.
